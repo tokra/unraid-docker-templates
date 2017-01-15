@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-<Beta>False</Beta>
-<Category>Productivity: Tools:</Category>
   <Name>jenkinsci</Name>
-  <Description>
-    Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.
-	[b][span style='color: red;']Configuration[/span][/u][br]
-    [b]/config[/b] This folder is used for jenkins storing configuration, database and logs.
-  </Description>
-  <Overview>
-	Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.
-  </Overview>
-   <Registry>https://registry.hub.docker.com/_/jenkins/</Registry>
+  <Description>    Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.	[b][span style='color: red;']Configuration[/span][/u][br]    [b]/config[/b] This folder is used for jenkins storing configuration, database and logs.  </Description>
+  <Overview>	Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.  </Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/_/jenkins/</Registry>
   <GitHub>https://github.com/jenkinsci/jenkins</GitHub>
   <Repository>jenkinsci/jenkins</Repository>
   <Project>https://jenkins.io/</Project>
@@ -52,15 +45,21 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8090]/</WebUI>
+  <Banner></Banner>
   <Icon>https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png</Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
-  <ExtraParams></ExtraParams>
+  <Date>2017-01-15</Date>
+  <Changes></Changes>
+  <Beta>False</Beta>
+  <Category>Tools:</Category>
 </Containers>
