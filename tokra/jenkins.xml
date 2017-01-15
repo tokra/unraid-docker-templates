@@ -33,20 +33,28 @@
       <Name>JAVA_ARGS</Name>
       <Value>-Xmx512m</Value>
     </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>0</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>0</Value>
+    </Variable>
   </Environment>
   <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
     <Volume>
       <HostDir>/mnt/</HostDir>
       <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/jenkinsci/home</HostDir>
+      <ContainerDir> /var/jenkins_home</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8090]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <Banner></Banner>
   <Icon>https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png</Icon>
   <Date>2017-01-15</Date>
