@@ -9,7 +9,7 @@
   <Overview>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.[br][br]&#xD;
 [b][span style='color: red;']Configuration[/span][/b][br]&#xD;
 [b]/var/jenkins_home[/b] This CONTAINER path is used for Jenkins to store configuration, database and logs etc.&#xD;
-I recommend to map it to you [b]appdata[/b], e.g.: [b]/mnt/cache/appdata/jenkinsci[/b]</Overview>
+I recommend to map it to your [b]appdata[/b], e.g.: [b]/mnt/cache/appdata/jenkinsci[/b]</Overview>
   <Category>HomeAutomation: Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/jenkins.xml</TemplateURL>
