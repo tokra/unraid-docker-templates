@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
   <Name>jenkinsci</Name>
-  <Description>    Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.	[b][span style='color: red;']Configuration[/span][/u][br]    [b]/config[/b] This folder is used for jenkins storing configuration, database and logs.  </Description>
-  <Overview>	Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.  </Overview>
+  <Description>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.[br][br]
+  [b][span style='color: red;']Configuration[/span][/b][br]
+  [b]/config[/b] This folder is used for jenkins storing configuration, database and logs.
+  </Description>
+  <Overview>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.  </Overview>
   <Support></Support>
   <Registry>https://hub.docker.com/_/jenkins/</Registry>
   <GitHub>https://github.com/jenkinsci/jenkins</GitHub>
