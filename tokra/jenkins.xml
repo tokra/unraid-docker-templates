@@ -1,18 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <Name>jenkinsci</Name>
-  <Description>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.[br][br]
-  [b][span style='color: red;']Configuration[/span][/b][br]
-  [b]/config[/b] This folder is used for jenkins storing configuration, database and logs.
-  </Description>
-  <Overview>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.  </Overview>
-  <Support></Support>
-  <Registry>https://hub.docker.com/_/jenkins/</Registry>
-  <GitHub>https://github.com/jenkinsci/jenkins</GitHub>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jenkinsci-official</Name>
   <Repository>jenkinsci/jenkins</Repository>
-  <Project>https://jenkins.io/</Project>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/_/jenkins/</Registry>
+  <Network>bridge</Network>
   <Privileged>true</Privileged>
+  <Support/>
+  <Overview>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.[br][br]&#xD;
+[b][span style='color: red;']Configuration[/span][/b][br]&#xD;
+[b]/var/jenkins_home[/b] This CONTAINER path is used for Jenkins to store configuration, database and logs etc.&#xD;
+I recommend to map it to you [b]appdata[/b], e.g.: [b]/mnt/cache/appdata/jenkinsci[/b]</Overview>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/jenkins.xml</TemplateURL>
+  <Icon>https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png</Icon>
+  <ExtraParams>--user root</ExtraParams>
+  <DateInstalled>1484498178</DateInstalled>
+  <Description>Jenkins is an automation engine with an unparalleled plugin ecosystem to support all of your favorite tools in your delivery pipelines, whether your goal is continuous integration, automated testing, or continuous delivery.[br][br]&#xD;
+[b][span style='color: red;']Configuration[/span][/b][br]&#xD;
+[b]/var/jenkins_home[/b] This CONTAINER path is used for Jenkins to store configuration, database and logs etc.&#xD;
+I recommend to map it to you [b]appdata[/b], e.g.: [b]/mnt/cache/appdata/jenkinsci[/b]</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -28,37 +35,28 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>JAVA_ARGS</Name>
-      <Value>-Xmx512m</Value>
-    </Variable>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>0</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>0</Value>
-    </Variable>
-  </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/</HostDir>
+      <HostDir>/mnt</HostDir>
       <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/jenkinsci/home</HostDir>
-      <ContainerDir>/var/jenkins_home</ContainerDir>
+      <HostDir>/mnt/user/appdata/jenkins_home</HostDir>
+      <ContainerDir>/var/jenkins_home/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <Banner></Banner>
-  <Icon>https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png</Icon>
-  <Date>2017-01-15</Date>
-  <Changes></Changes>
-  <Beta>False</Beta>
-  <Category>Tools:</Category>
-</Containers>
+  <Environment>
+    <Variable>
+      <Value>-Xmx512m</Value>
+      <Name>JAVA_ARGS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Host shares" Target="/mnt" Default="" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt</Config>
+  <Config Name="WebUI port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Host Port 2" Target="50000" Default="" Mode="tcp" Description="Container Port: 50000" Type="Port" Display="always" Required="false" Mask="false">50000</Config>
+  <Config Name="Java arguments for Jenkins" Target="JAVA_ARGS" Default="" Mode="" Description="Container Variable: JAVA_ARGS" Type="Variable" Display="always" Required="false" Mask="false">-Xmx512m</Config>
+  <Config Name="Jenkins Home" Target="/var/jenkins_home/" Default="" Mode="rw" Description="Container Path: /var/jenkins_home/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jenkins_home</Config>
+</Container>
