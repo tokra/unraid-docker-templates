@@ -29,6 +29,6 @@
     <!-- <Variable><Value>node_red_user_data</Value><Name>/mnt/user/appdata/node_red_user_data</Name><Mode/></Variable> -->
   </Environment>
   <!-- <Config Name="Host shares" Target="/mnt" Default="" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt</Config> -->
-  <Config Name="WebUI port" Target="1880" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
+  <!-- <Config Name="WebUI port" Target="1880" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">1880</Config> -->
   <!-- <Config Name="Host Port 2" Target="50000" Default="" Mode="tcp" Description="Container Port: 50000" Type="Port" Display="always" Required="false" Mask="false">50000</Config><Config Name="Java arguments for Jenkins" Target="JAVA_ARGS" Default="" Mode="" Description="Container Variable: JAVA_ARGS" Type="Variable" Display="always" Required="false" Mask="false">-Xmx512m</Config><Config Name="Jenkins Home" Target="/var/jenkins_home/" Default="" Mode="rw" Description="Container Path: /var/jenkins_home/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jenkins_home</Config> -->
 </Container>
