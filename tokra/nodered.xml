@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="1">
+  <Name>node-red</Name>
+  <Repository>nodered/node-red-docker</Repository>
+  <Registry>https://hub.docker.com/r/nodered/node-red-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Overview>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.  </Overview>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:1880]/</WebUI>
+  <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/nodered.xml</TemplateURL>
+  <Icon>https://nodered.org/about/resources/media/node-red-icon.png</Icon>
+  <ExtraParams>--user root</ExtraParams>
+  <DateInstalled>1484498178</DateInstalled>
+  <Description>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.    </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1880</HostPort>
+        <ContainerPort>1880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/node_red_user_data</HostDir>
+      <ContainerDir>node_red_user_data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="WebUI port" Target="1880" Default="" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
+  <Config Name="Nodered User Data" Target="node_red_user_data" Default="" Mode="rw" Description="Container Path: node_red_user_data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/node_red_user_data</Config>
+</Container>
