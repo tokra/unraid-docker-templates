@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="1">
+<Container version="2">
   <Name>node-red</Name>
   <Repository>nodered/node-red-docker</Repository>
   <Registry>https://hub.docker.com/r/nodered/node-red-docker/</Registry>
@@ -13,7 +13,8 @@
   <Icon>https://nodered.org/about/resources/media/node-red-icon.png</Icon>
   <ExtraParams>--user root</ExtraParams>
   <DateInstalled>1484498178</DateInstalled>
-  <Description>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.    </Description>
+  <Description>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.  </Overview>
+  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -24,14 +25,10 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/node_red_user_data</HostDir>
-      <ContainerDir>node_red_user_data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment></Environment>
-  <Config Name="WebUI port" Target="1880" Default="" Mode="tcp" Description="Container Port: 1880" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
-  <Config Name="Nodered User Data" Target="node_red_user_data" Default="" Mode="rw" Description="Container Path: node_red_user_data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/node_red_user_data</Config>
+  <Environment>
+    <!-- <Variable><Value>node_red_user_data</Value><Name>/mnt/user/appdata/node_red_user_data</Name><Mode/></Variable> -->
+  </Environment>
+  <!-- <Config Name="Host shares" Target="/mnt" Default="" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt</Config> -->
+  <Config Name="WebUI port" Target="1880" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">1880</Config>
+  <!-- <Config Name="Host Port 2" Target="50000" Default="" Mode="tcp" Description="Container Port: 50000" Type="Port" Display="always" Required="false" Mask="false">50000</Config><Config Name="Java arguments for Jenkins" Target="JAVA_ARGS" Default="" Mode="" Description="Container Variable: JAVA_ARGS" Type="Variable" Display="always" Required="false" Mask="false">-Xmx512m</Config><Config Name="Jenkins Home" Target="/var/jenkins_home/" Default="" Mode="rw" Description="Container Path: /var/jenkins_home/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jenkins_home</Config> -->
 </Container>
