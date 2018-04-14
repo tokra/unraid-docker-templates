@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="1">
+  <Name>eclipse-mosquittol</Name>
+  <Repository>eclipse-mosquitto</Repository>
+  <Registry>https://hub.docker.com/_/jenkins/</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Overview>Eclipse Mosquitto is an open source message broker which implements MQTT version 3.1 and 3.1.1</Overview>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/eclipse-mosquitto.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/docker-library/docs/543ed10ed132af12c3662c7a04010d3f36538094/eclipse-mosquitto/logo.png</Icon>
+  <ExtraParams>--user root</ExtraParams>
+  <DateInstalled>1484498178</DateInstalled>
+  <Description>Eclipse Mosquitto is an open source message broker which implements MQTT version 3.1 and 3.1.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9001</HostPort>
+        <ContainerPort>9001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mosquitto/config</HostDir>
+      <ContainerDir>/mosquitto/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mosquitto/data</HostDir>
+      <ContainerDir>/mosquitto/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mosquitto/log</HostDir>
+      <ContainerDir>/mosquitto/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment></Environment>
+  <Config Name="WebUI port" Target="9001" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">9001</Config>
+  <Config Name="MQTT Broker port" Target="1883" Default="" Mode="tcp" Description="Container Port: 50000" Type="Port" Display="always" Required="false" Mask="false">1883</Config>
+</Container>
