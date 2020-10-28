@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ApacheKafka</Name>
+  <Repository>landoop/fast-data-dev:latest</Repository>
+  <Registry>https://hub.docker.com/r/landoop/fast-data-dev</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://kafka.apache.org/</Project>
+  <Overview>Apache Kafka docker image for developers; with Lenses (lensesio/box) or Lenses.io's open source UI tools (lensesio/fast-data-dev). Have a full fledged Kafka installation up and running in seconds and top it off with a modern streaming platform (only for kafka-lenses-dev), intuitive UIs and extra goodies. Also includes Kafka Connect, Schema Registry, Lenses.io's Stream Reactor 25+ Connectors and more.</Overview>
+  <Category>Tools: Other:</Category>
+  <WebUI>http://[IP]:[PORT:3030]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://svn.apache.org/repos/asf/kafka/site/logos/originals/png/TALL%20-%20Black%20on%20Transparent.png</Icon>
+  <ExtraParams>-e ADV_HOST=tower</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1603917441</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Apache Kafka docker image for developers; with Lenses (lensesio/box) or Lenses.io's open source UI tools (lensesio/fast-data-dev). Have a full fledged Kafka installation up and running in seconds and top it off with a modern streaming platform (only for kafka-lenses-dev), intuitive UIs and extra goodies. Also includes Kafka Connect, Schema Registry, Lenses.io's Stream Reactor 25+ Connectors and more.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9092</HostPort>
+        <ContainerPort>9092</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2181</HostPort>
+        <ContainerPort>2181</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3030</HostPort>
+        <ContainerPort>3030</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9581-9585</HostPort>
+        <ContainerPort>9581-9585</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8082</HostPort>
+        <ContainerPort>8082</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kafka/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kafka/opt</HostDir>
+      <ContainerDir>/opt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kafka/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/data</Config>
+  <Config Name="opt" Target="/opt" Default="" Mode="rw" Description="Container Path: /opt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/opt</Config>
+  <Config Name="mnt" Target="/mnt" Default="" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/mnt</Config>
+  <Config Name="Kafka Broker" Target="9092" Default="9092" Mode="tcp" Description="Container Port: 9092" Type="Port" Display="always" Required="true" Mask="false">9092</Config>
+  <Config Name="Zoo Keeper" Target="2181" Default="2181" Mode="tcp" Description="Container Port: 2181" Type="Port" Display="always" Required="true" Mask="false">2181</Config>
+  <Config Name="Web Server" Target="3030" Default="3030" Mode="tcp" Description="Container Port: 3030" Type="Port" Display="always" Required="true" Mask="false">3030</Config>
+  <Config Name="JMX" Target="9581-9585" Default="9581-9585" Mode="tcp" Description="Container Port: 9581-9585" Type="Port" Display="always" Required="false" Mask="false">9581-9585</Config>
+  <Config Name="Kafka REST Proxy" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
+  <Config Name="Schema Registry" Target="8081" Default="8081" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="Kafka Connect Distributed" Target="8083" Default="8083" Mode="tcp" Description="Container Port: 8083" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
+</Container>
