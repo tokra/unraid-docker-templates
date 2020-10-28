@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ApacheKafka</Name>
-  <Repository>landoop/fast-data-dev:latest</Repository>
+  <Repository>landoop/fast-data-dev</Repository>
   <Registry>https://hub.docker.com/r/landoop/fast-data-dev</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -81,7 +81,6 @@
   <Environment/>
   <Labels/>
   <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/data</Config>
-  <Config Name="opt" Target="/opt" Default="" Mode="rw" Description="Container Path: /opt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/opt</Config>
   <Config Name="mnt" Target="/mnt" Default="" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/kafka/mnt</Config>
   <Config Name="Kafka Broker" Target="9092" Default="9092" Mode="tcp" Description="Container Port: 9092" Type="Port" Display="always" Required="true" Mask="false">9092</Config>
   <Config Name="Zoo Keeper" Target="2181" Default="2181" Mode="tcp" Description="Container Port: 2181" Type="Port" Display="always" Required="true" Mask="false">2181</Config>
