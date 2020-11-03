@@ -21,7 +21,7 @@
     <DonateLink></DonateLink>
     <Description>openHAB - a vendor and technology agnostic open source automation software for your home.</Description>
     <Networking>
-        <Mode>none</Mode>
+        <Mode>bridge</Mode>
         <Publish>
             <Port>
                 <HostPort>9080</HostPort>
@@ -64,6 +64,7 @@
     </Data>
     <Environment/>
     <Labels/>
+    <Config Name="Host Port 1" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">9080</Config>
     <Config Name="Host Path 1" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
     <Config Name="Host Path 2" Target="/openhab/conf" Default="/mnt/user/appdata/openhab/conf/" Mode="rw" Description="Container Path: /openhab/conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openhab2/conf/</Config>
     <Config Name="Host Path 3" Target="/openhab/userdata" Default="/mnt/user/appdata/openhab/userdata/" Mode="rw" Description="Container Path: /openhab/userdata" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openhab2/userdata/</Config>
