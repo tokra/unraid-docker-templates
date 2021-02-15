@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>jenkinsci-official</Name>
+  <Name>tokra-jenkinsci-official</Name>
   <Repository>jenkinsci/jenkins</Repository>
   <Registry>https://hub.docker.com/_/jenkins/</Registry>
   <Network>bridge</Network>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>eclipse-mosquitto</Name>
+  <Name>tokra-eclipse-mosquitto</Name>
   <Repository>eclipse-mosquitto</Repository>
-  <Registry>https://hub.docker.com/_/jenkins/</Registry>
+  <Registry>https://hub.docker.com/_/eclipse-mosquitto</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>true</Privileged>

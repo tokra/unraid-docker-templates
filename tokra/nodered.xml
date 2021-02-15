@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>node-red</Name>
+  <Name>tokra-node-red</Name>
   <Repository>nodered/node-red-docker</Repository>
   <Registry>https://hub.docker.com/r/nodered/node-red-docker/</Registry>
   <Network>bridge</Network>
   <Privileged>true</Privileged>
   <Support/>
-  <Overview>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.  </Overview>
+  <Overview>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.</Overview>
   <Category>HomeAutomation: Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:1880]/</WebUI>
   <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/nodered.xml</TemplateURL>
   <Icon>https://nodered.org/about/resources/media/node-red-icon.png</Icon>
   <ExtraParams>--user root</ExtraParams>
   <DateInstalled>1484498178</DateInstalled>
-  <Description>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.  </Overview>
-  </Description>
+  <Description>Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.[br]It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
