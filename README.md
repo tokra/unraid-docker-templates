@@ -8,6 +8,7 @@ Docker templates for unRAID NAS
 * Mosca Aedes https://hub.docker.com/r/moscajs/aedes
 * Nodered https://hub.docker.com/r/nodered/node-red-docker/
 * OpenHAB https://hub.docker.com/r/openhab/openhab/
+* Portainer https://hub.docker.com/r/portainer/portainer
 
 ## Usage
 You need to be running unRAID ver >= 6.0.0.
