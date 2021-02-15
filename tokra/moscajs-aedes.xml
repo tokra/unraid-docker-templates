@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Containers>
+  <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/moscajs-aedes.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <Name>tokra-moscajs-aedes</Name>
+  <Description>Barebone MQTT server that can run on any stream servers</Description>
+  <Overview>Barebone MQTT server that can run on any stream servers</Overview>
+  <Support />
+  <Registry>https://hub.docker.com/r/moscajs/aedes</Registry>
+  <GitHub>https://github.com/moscajs/aedes</GitHub>
+  <Repository>moscajs/aedes</Repository>
+  <Project>https://github.com/moscajs/aedes</Project>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8883</HostPort>
+        <ContainerPort>8883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment />
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/aedes/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Banner></Banner>
+  <Icon>https://avatars.githubusercontent.com/u/53509501?s=400&v=4</Icon>
+  <DonateText />
+  <DonateLink />
+  <DonateImg />
+  <ExtraParams>--config /data/myConfig.js</ExtraParams>
+  <PostArgs />
+</Containers>
