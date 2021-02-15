@@ -41,6 +41,6 @@
   <DonateText />
   <DonateLink />
   <DonateImg />
-  <ExtraParams>--config /data/myConfig.js</ExtraParams>
+  <ExtraParams></ExtraParams>
   <PostArgs />
 </Containers>
