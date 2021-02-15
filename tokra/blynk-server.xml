@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Containers>
+  <TemplateURL>https://github.com/to-kra/unraid-docker-templates/blob/master/tokra/blynk-server.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>HomeAutomation: Productivity: Tools:</Category>
+  <Name>tokra-blynk-server</Name>
+  <Description>Blynk is a platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and the likes over the Internet.</Description>
+  <Overview>Blynk is a platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and the likes over the Internet.[br]
+    You can easily build graphic interfaces for all your projects by simply dragging and dropping widgets.[br][br]
+  </Overview>
+  <Support />
+  <Registry>https://hub.docker.com/r/mpherg/blynk-server</Registry>
+  <GitHub>https://github.com/blynkkk/blynk-server</GitHub>
+  <Repository>mpherg/blynk-server</Repository>
+  <Project>https://blynk.cc</Project>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8441</HostPort>
+        <ContainerPort>8441</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9443</HostPort>
+        <ContainerPort>9443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment />
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/blynk-server/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/tokra/unraid-docker-templates/master/tokra/images/blynk.png</Icon>
+  <DonateText />
+  <DonateLink />
+  <DonateImg />
+  <ExtraParams></ExtraParams>
+  <PostArgs />
+</Containers>
