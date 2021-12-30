@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-    <Name>tokra-Influxdb_2.x</Name>
+    <Name>tokra-influxdb-2.x</Name>
     <Repository>influxdb:latest</Repository>
     <Registry>https://hub.docker.com/_/influxdb/</Registry>
     <Network>bridge</Network>
