@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>tokra-Influxdb_2.x</Name>
+    <Repository>influxdb:latest</Repository>
+    <Registry>https://hub.docker.com/_/influxdb/</Registry>
+    <Network>bridge</Network>
+    <MyIP />
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support />
+    <Project>https://influxdata.com/</Project>
+    <Overview>InfluxDB is an open-source time series database (TSDB) developed by the company InfluxData. It is written in the Go programming language for storage and retrieval of time series data in fields such as operations monitoring, application metrics, Internet of Things sensor data, and real-time analytics. It also has support for processing data from Graphite.</Overview>
+    <Category>Network:Management Tools:</Category>
+    <WebUI>http://[IP]:[PORT:8086]/</WebUI>
+    <TemplateURL />
+    <Icon>https://influxdata.github.io/branding/img/downloads/influxdata-logo--symbol--pool-alpha.png</Icon>
+    <ExtraParams />
+    <PostArgs />
+    <CPUset />
+    <DateInstalled>1640889011</DateInstalled>
+    <DonateText />
+    <DonateLink />
+    <Description>InfluxDB is an open-source time series database (TSDB) developed by the company InfluxData. It is written in the Go programming language for storage and retrieval of time series data in fields such as operations monitoring, application metrics, Internet of Things sensor data, and real-time analytics. It also has support for processing data from Graphite.</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8086</HostPort>
+                <ContainerPort>8086</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/influx-db/influxdb</HostDir>
+            <ContainerDir>/var/lib/influxdb</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/influx-db/influxdb2</HostDir>
+            <ContainerDir>/var/lib/influxdb2</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/influx-db/influxdb-config</HostDir>
+            <ContainerDir>/etc/influxdb</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/influx-db/influxdb2-config</HostDir>
+            <ContainerDir>/etc/influxdb2</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Value>admin</Value>
+            <Name>DOCKER_INFLUXDB_INIT_USERNAME</Name>
+            <Mode />
+        </Variable>
+        <Variable>
+            <Value>admin1234</Value>
+            <Name>DOCKER_INFLUXDB_INIT_PASSWORD</Name>
+            <Mode />
+        </Variable>
+        <Variable>
+            <Value>iot-org</Value>
+            <Name>DOCKER_INFLUXDB_INIT_ORG</Name>
+            <Mode />
+        </Variable>
+        <Variable>
+            <Value>iot-bucket</Value>
+            <Name>DOCKER_INFLUXDB_INIT_BUCKET</Name>
+            <Mode />
+        </Variable>
+    </Environment>
+    <Labels />
+    <Config Name="HTTP UI and API port" Target="8086" Default="8086" Mode="tcp" Description="Container Port: 8086" Type="Port" Display="always" Required="true" Mask="false">8086</Config>
+    <Config Name="Host Path 1" Target="/var/lib/influxdb" Default="/mnt/user/appdata/influxdb" Mode="rw" Description="Container Path: /var/lib/influxdb" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/influx-db/influxdb</Config>
+    <Config Name="Host Path 2" Target="/var/lib/influxdb2" Default="" Mode="rw" Description="Container Path: /var/lib/influxdb2" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/influx-db/influxdb2</Config>
+    <Config Name="Host Path 3" Target="/etc/influxdb/" Default="" Mode="rw" Description="Container Path: /etc/influxdb/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/influx-db/influxdb-config/</Config>
+    <Config Name="Host Path 4" Target="/etc/influxdb2/" Default="" Mode="rw" Description="Container Path: /etc/influxdb2/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/influx-db/influxdb2-config/</Config>
+    <Config Name="DOCKER_INFLUXDB_INIT_USERNAME" Target="DOCKER_INFLUXDB_INIT_USERNAME" Default="admin" Mode="" Description="Container Variable: DOCKER_INFLUXDB_INIT_USERNAME" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+    <Config Name="DOCKER_INFLUXDB_INIT_PASSWORD" Target="DOCKER_INFLUXDB_INIT_PASSWORD" Default="admin1234" Mode="" Description="Container Variable: DOCKER_INFLUXDB_INIT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">admin1234</Config>
+    <Config Name="DOCKER_INFLUXDB_INIT_ORG" Target="DOCKER_INFLUXDB_INIT_ORG" Default="iot-org" Mode="" Description="Container Variable: DOCKER_INFLUXDB_INIT_ORG" Type="Variable" Display="always" Required="false" Mask="false">iot-org</Config>
+    <Config Name="DOCKER_INFLUXDB_INIT_BUCKET" Target="DOCKER_INFLUXDB_INIT_BUCKET" Default="iot-bucket" Mode="" Description="Container Variable: DOCKER_INFLUXDB_INIT_BUCKET" Type="Variable" Display="always" Required="true" Mask="false">iot-bucket</Config>
+</Container>
